@@ -14,11 +14,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->user_id); ?>
+	<?php echo $data->author->username ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('jobpost_id')); ?>:</b>
-	<?php echo CHtml::encode($data->jobpost_id); ?>
+	<?php echo $data->jobtitle->title; ?>
 	<br />
 
 

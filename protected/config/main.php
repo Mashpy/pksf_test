@@ -14,10 +14,11 @@ return array(
 
 	// autoloading model and component classes
 	'import'=>array(
-		'application.models.*',
-		'application.components.*',
-    'application.modules.user.models.*',
-    'application.modules.user.components.*',
+        'application.models.*',
+        'application.components.*',
+        'application.modules.user.*',
+        'application.modules.user.models.*',
+        'application.modules.user.components.*',
 	),
   
   
