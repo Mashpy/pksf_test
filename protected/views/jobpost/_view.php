@@ -17,5 +17,8 @@
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
+  <?php echo CHtml::link('Apply on this job',array('applicant/create',
+                                     'jobpost'=> CHtml::encode($data->id),
+                                     )); ?>
 
 </div>

@@ -551,3 +551,55 @@ Stack trace:
 REQUEST_URI=/index.php?r=user/registration
 HTTP_REFERER=http://mashpy-226500.apse1.nitrousbox.com/index.php?r=user/registration
 ---
+2015/05/31 12:49:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pksf_test.applicant' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `applicant`.
+in /home/action/workspace/www/index.php (13)
+2015/05/31 13:07:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pksf_test.applicant' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `applicant`.
+in /home/action/workspace/www/index.php (13)
+2015/05/31 13:07:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pksf_test.applicant' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `applicant`.
+in /home/action/workspace/www/index.php (13)
+2015/05/31 13:16:09 [error] [php] Undefined variable: data (/home/action/workspace/www/protected/views/applicant/_form.php:31)
+Stack trace:
+#0 /home/action/workspace/framework/web/CController.php(869): ApplicantController->renderFile()
+#1 /home/action/workspace/www/protected/views/applicant/create.php(18): ApplicantController->renderPartial()
+#2 /home/action/workspace/framework/web/CBaseController.php(126): require()
+#3 /home/action/workspace/framework/web/CBaseController.php(95): ApplicantController->renderInternal()
+#4 /home/action/workspace/framework/web/CController.php(869): ApplicantController->renderFile()
+#5 /home/action/workspace/framework/web/CController.php(782): ApplicantController->renderPartial()
+#6 /home/action/workspace/www/protected/controllers/ApplicantController.php(79): ApplicantController->render()
+#7 /home/action/workspace/framework/web/actions/CInlineAction.php(49): ApplicantController->actionCreate()
+#8 /home/action/workspace/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /home/action/workspace/framework/web/filters/CFilterChain.php(133): ApplicantController->runAction()
+#10 /home/action/workspace/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /home/action/workspace/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /home/action/workspace/framework/web/filters/CInlineFilter.php(58): ApplicantController->filterAccessControl()
+#13 /home/action/workspace/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /home/action/workspace/framework/web/CController.php(291): CFilterChain->run()
+#15 /home/action/workspace/framework/web/CController.php(265): ApplicantController->runActionWithFilters()
+#16 /home/action/workspace/framework/web/CWebApplication.php(282): ApplicantController->run()
+#17 /home/action/workspace/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /home/action/workspace/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /home/action/workspace/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=applicant/create
+in /home/action/workspace/www/protected/views/applicant/_form.php (31)
+in /home/action/workspace/www/protected/views/applicant/create.php (18)
+in /home/action/workspace/www/protected/controllers/ApplicantController.php (79)
+2015/05/31 13:35:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/action".' in /home/action/workspace/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/action/workspace/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/acti...')
+#1 /home/action/workspace/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/action/workspace/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/controller/action?param1=value1&param2=value2&param3=value3
+HTTP_REFERER=http://mashpy-226500.apse1.nitrousbox.com/index.php/jobpost
+---
+2015/05/31 13:36:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "applicant".' in /home/action/workspace/framework/web/CController.php:483
+Stack trace:
+#0 /home/action/workspace/framework/web/CController.php(270): CController->missingAction('applicant')
+#1 /home/action/workspace/framework/web/CWebApplication.php(282): CController->run('applicant')
+#2 /home/action/workspace/framework/web/CWebApplication.php(141): CWebApplication->runController('jobpost/applica...')
+#3 /home/action/workspace/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/action/workspace/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/jobpost/applicant?param1=value1&param2=value2&param3=value3
+HTTP_REFERER=http://mashpy-226500.apse1.nitrousbox.com/index.php/jobpost
+---
