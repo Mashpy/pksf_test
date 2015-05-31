@@ -26,3 +26,6 @@ $this->menu=array(
 		'description',
 	),
 )); ?>
+  <?php echo CHtml::link('Apply on this job',array('applicant/create',
+                                     'jobpost'=> $model->id
+                                     )); ?>

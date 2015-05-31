@@ -23,7 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'colver_letter',
-		'user_id',
-		'jobpost_id',
+  	'author.username',
+		'jobtitle.title',
 	),
 )); ?>
