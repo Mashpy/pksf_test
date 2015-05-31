@@ -996,3 +996,55 @@ REQUEST_URI=/index.php/jobpost/1
 in /home/action/workspace/www/protected/views/jobpost/view.php (30)
 in /home/action/workspace/www/protected/controllers/JobpostController.php (56)
 in /home/action/workspace/www/index.php (13)
+2015/05/31 16:10:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view post".' in /home/action/workspace/framework/web/CController.php:483
+Stack trace:
+#0 /home/action/workspace/framework/web/CController.php(270): CController->missingAction('view post')
+#1 /home/action/workspace/framework/web/CWebApplication.php(282): CController->run('view post')
+#2 /home/action/workspace/framework/web/CWebApplication.php(141): CWebApplication->runController('jobpost/view po...')
+#3 /home/action/workspace/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/action/workspace/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/jobpost/view%20post/id/1
+HTTP_REFERER=http://mashpy-226500.apse1.nitrousbox.com/index.php/jobpost
+---
+2015/05/31 16:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view post".' in /home/action/workspace/framework/web/CController.php:483
+Stack trace:
+#0 /home/action/workspace/framework/web/CController.php(270): CController->missingAction('view post')
+#1 /home/action/workspace/framework/web/CWebApplication.php(282): CController->run('view post')
+#2 /home/action/workspace/framework/web/CWebApplication.php(141): CWebApplication->runController('jobpost/view po...')
+#3 /home/action/workspace/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/action/workspace/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/jobpost/view%20post/id/1
+---
+2015/05/31 16:11:36 [error] [php] Trying to get property of non-object (/home/action/workspace/www/protected/views/applicant/_view.php:17)
+Stack trace:
+#0 /home/action/workspace/framework/zii/widgets/CListView.php(291): ApplicantController->renderFile()
+#1 /home/action/workspace/framework/zii/widgets/CBaseListView.php(181): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /home/action/workspace/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback()
+#4 /home/action/workspace/framework/zii/widgets/CBaseListView.php(149): CListView->renderContent()
+#5 /home/action/workspace/framework/web/CBaseController.php(181): CListView->run()
+#6 /home/action/workspace/www/protected/views/applicant/index.php(20): ApplicantController->widget()
+#7 /home/action/workspace/framework/web/CBaseController.php(126): require()
+#8 /home/action/workspace/framework/web/CBaseController.php(95): ApplicantController->renderInternal()
+#9 /home/action/workspace/framework/web/CController.php(869): ApplicantController->renderFile()
+#10 /home/action/workspace/framework/web/CController.php(782): ApplicantController->renderPartial()
+#11 /home/action/workspace/www/protected/controllers/ApplicantController.php(128): ApplicantController->render()
+#12 /home/action/workspace/framework/web/actions/CInlineAction.php(49): ApplicantController->actionIndex()
+#13 /home/action/workspace/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/action/workspace/framework/web/filters/CFilterChain.php(133): ApplicantController->runAction()
+#15 /home/action/workspace/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/action/workspace/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/action/workspace/framework/web/filters/CInlineFilter.php(58): ApplicantController->filterAccessControl()
+#18 /home/action/workspace/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/action/workspace/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/action/workspace/framework/web/CController.php(265): ApplicantController->runActionWithFilters()
+#21 /home/action/workspace/framework/web/CWebApplication.php(282): ApplicantController->run()
+#22 /home/action/workspace/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/action/workspace/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#24 /home/action/workspace/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/applicant/index
+in /home/action/workspace/www/protected/views/applicant/_view.php (17)
+in /home/action/workspace/www/protected/views/applicant/index.php (20)
+in /home/action/workspace/www/protected/controllers/ApplicantController.php (128)
